@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package codinginterviewquestions;
+package coding;
 import java.io.*;
 import java.util.*;
 /**
@@ -34,4 +34,3 @@ public class JumpingOnTheClouds {
         System.out.println("The minimum number of jumps required is : "+ result);
     }
 }
-

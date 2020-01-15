@@ -3,7 +3,7 @@ Two Sum II Input array is sorted.
 This problem is similar to TwoSum.
 To solve this problem, we can use two points to scan the array from both sides.
  */
-package codinginterviewquestions;
+package coding;
 import java.io.*;
 import java.util.*;
 /**
