@@ -36,6 +36,7 @@ public class MajorityElement {
         int max_key;
         for(int i=0;i<arr.length;i++){
             if(max_value<map.get(arr[i]))
+                ;
         }
 }
     public static void main(String args[])throws IOException{
