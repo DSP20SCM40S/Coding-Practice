@@ -23,21 +23,25 @@ import java.util.*;
 public class MajorityElement {
     static int MajorityElement(int[] arr){
         HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
-        for(int i=0;i<arr.length;i++){
+        int n = arr.length;
+        for(int i =0;i<n;i++){
             if(map.containsKey(arr[i])){
                 int val=map.get(arr[i]);
-                map.put(arr[i],val+1);
-            } 
+                map.put(arr[i], val+1);
+            }
             else{
                 map.put(arr[i], 1);
             }
         }
-        int max_value=0;
-        int max_key;
-        for(int i=0;i<arr.length;i++){
-            if(max_value<map.get(arr[i]))
-                ;
-        }
+        int m=-1;
+    for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
+        int val = entry.getValue();
+        if(val > n/2){
+            m=entry.getKey();
+            break;
+        }        
+    }
+    return m;
 }
     public static void main(String args[])throws IOException{
         Scanner sc = new Scanner(System.in);

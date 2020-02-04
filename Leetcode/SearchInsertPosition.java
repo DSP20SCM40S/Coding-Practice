@@ -29,22 +29,17 @@ import java.util.*;
  */
 public class SearchInsertPosition {
     static int searchposition(int[] arr, int num){
-        int n = arr.length;
-        int flag = 0;
-        int i=1;
-        int x=arr[0];
-        while (x<=num){
+        int next_position = 0;
+        for(int i=0; i<arr.length; i++){
+            int x=arr[i];
             if(x==num){
                 return i;
             }
-            x=arr[i++];
+            if(x<num){
+                next_position=i+1;
+            }
         }
-        int position = -1;
-        while(x<num){
-            position = i;
-            x=arr[i++];
-        }
-        return position;
+        return (next_position);
     }
     public static void main(String args[])throws IOException{
         Scanner sc = new Scanner(System.in);
